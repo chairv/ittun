@@ -56,3 +56,8 @@ h2 span {
 .text-3{
     color: #287e7d;
 }
+
+.download-ul li{
+    float:left;
+    padding: 6px;
+}
