@@ -57,7 +57,7 @@ h2 span {
     color: #287e7d;
 }
 
-.download-ul li{
+.download-ul ol{
     float:left;
     padding: 6px;
     padding-top: 4px;
