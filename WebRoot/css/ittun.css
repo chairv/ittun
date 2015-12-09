@@ -45,12 +45,17 @@ header{
     border-left-color: transparent;
 }
 
+.ribbon a{
+
+}
+
 .ribbon a:link, .ribbon a:visited {
     color: #000;
     text-decoration: none;
     float: left;
     height: 3.5em;
     overflow: hidden;
+    border:1px solid white;
 }
 
 .ribbon span{
@@ -116,7 +121,7 @@ h2 span {
 }
 
 .text-1 {
-    font: 300 26px/40px 'Open Sans Condensed', sans-serif;
+    font: 200 18px/40px 'Open Sans Condensed', sans-serif;
     color: #287e7d;
     margin-bottom: 9px;
 }
@@ -130,6 +135,10 @@ h2 span {
 
 .color1 {
     color: #287e7d;
+}
+
+.color2{
+    color:green;
 }
 
 .clear {
@@ -152,4 +161,16 @@ h2 span {
 
 .expImg{
     width: 641px;
+}
+
+.lp-12{
+    padding-left:32px;
+}
+
+.tp-30{
+    padding-top: 30px;
+}
+
+.banner-img{
+    width: 841px;
 }
