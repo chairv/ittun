@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>ngrok国内服务器 | ITTUN</title>
+    <meta name="keywords" content="ngrok微信开发,ngrok发布本地网站,微信url,微信开发url,微信开发神器"/>
+    <meta name="description" content="ngrok国内服务器,微信开发外网url,微信开发url,微信开发神器"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ittun-ngrok.css">
+
+</head>
+<body>
+
+<div id="nav">
+    <div class="container-fluid">
+        <div class="masthead">
+            <ul class="nav nav-pills pull-right">
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+
+                <!--<li class="">-->
+                    <!--<a href="#">Download</a>-->
+                <!--</li>-->
+
+                <!--<li class="">-->
+                    <!--<a href="#">Docs</a>-->
+                <!--</li>-->
+
+                <!--<li class="">-->
+                    <!--<a href="#">Product</a>-->
+                <!--</li>-->
+
+                <!--<li class="">-->
+                    <!--<a href="#">FAQ</a>-->
+                <!--</li>-->
+
+                <!--<li class="">-->
+                    <!--<a href="#">Login</a>-->
+                <!--</li>-->
+            </ul>
+            <h3 class="wordmark muted"><a href="#">IT TUN</a></h3>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <hr style="margin-top: 20px;">
+</div>
+
+
+<div class="container-fluid">
+    <!--<div style="margin: 100px 0px" class="jumbotron">-->
+    <!--<h1 class="text-center">让本地连上公网</h1>-->
+
+    <!--<p style="color:#666; margin: 20px 0; font-size: 20px" class="lead text-center">”I want to expose a local server-->
+    <!--behind a NAT or firewall to the internet.”</p>-->
+
+    <!--<div style="margin: 35px 0" class="text-center"><a class="btn btn-large btn-primary" href="html/download.html">Download</a>-->
+    <!--&lt;!&ndash;<a style="margin-left: 20px;" class="btn btn-large btn-success" href="https://dashboard.ngrok.com/user/signup">Sign up</a>&ndash;&gt;-->
+    <!--</div>-->
+    <!--</div>-->
+    <a style="border-top: 1px solid rgb(245, 245, 245); border-bottom: 1px solid rgb(245, 245, 245); padding: 10px; display: block;"
+       href="#"
+       class="text-center">
+        <span class="pull-left"><strong style="color:inherit">
+            ★完善计划</strong></span><span
+            style="color: rgb(163, 163, 163); display: inline-block; margin: 0px 5px;">不断让产品更好.</span><span
+            class="pull-right">Learn more ▶</span></a>
+
+    <div class="row-fluid">
+        <div class="span6">
+            <h4>本地web项目快速展示</h4>
+
+            <p> 1: 不需要购买域名<br>
+                2: 不需要购买服务器<br>
+                3: 不需要备案<br>
+                4: <a href="#download">启动客户端</a> <br>
+                5: 通过二级域名访问web项目
+            </p>
+        </div>
+        <div class="span6">
+            <h4>移动开发更方便</h4>
+            <p>
+                1: 微信开发者url,方便调用<br>
+                2: APP开发手机端调试
+            </p>
+        </div>
+    </div>
+
+    <img src="images/demo.png">
+
+    <div class="row-fluid">
+        <div class="span6">
+            <h4>远程办公更方便</h4>
+
+            <p>
+                1: 远程电脑上运行ittun client<br>
+                2: 指定相应端口,协议<br>
+                3: 远程连接操作更方便<br>
+            </p>
+        </div>
+        <div class="span6">
+            <h4>免费使用,通道加密更安全</h4>
+
+            <p>
+                1: 通道全加密安全可靠<br>
+                2: 免费使用,交流分享
+            </p>
+        </div>
+    </div>
+    <img src="images/webhooks.png">
+
+    <hr>
+    <!--<div class="row-fluid">-->
+        <!--<div class="span12">-->
+            <!--<p style="color:#555" class="lead">Need to run <a href="https://ngrok.com/product/ngrok-link">ngrok in-->
+                <!--production</a>? Use <a href="https://ngrok.com/product/ngrok-link">ngrok link</a> to-->
+                <!--manage your IoT devices or as a lightweight alternative to VPN for targeted access into customer-->
+                <!--networks.-->
+            <!--</p>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<hr>-->
+
+
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <h2 id="download">下载客户端</h2>
+
+            <p>安装方便: 下载、解压、修改二级域名与端口、启动.</p>
+            <h4>Step 1: Download ittun</h4>
+            <table id="dl" class="table">
+                <tbody>
+                <!--<tr id="dl-darwin-amd64">-->
+                    <!--<th>Mac OS X</th>-->
+                    <!--<td>-->
+                <!--<span class="pull-right">-->
+                    <!--<a href="https://dl.ngrok.com/ngrok_2.0.19_darwin_amd64.zip" class="btn btn-inverse">-->
+                        <!--<i class="icon-white icon-download"></i> Download-->
+                    <!--</a>-->
+                <!--</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+                <tr id="dl-windows-386" class=" detected">
+                    <th>Windows64</th>
+                    <td>
+                <span class="pull-right">
+                    <a href="upload/ittun_win64.zip" class="btn btn-success">
+                        <i class="icon-white icon-download"></i> Download
+                    </a>
+                </span>
+                    </td>
+                </tr>
+                <tr id="dl-linux-amd64">
+                    <th>Linux64</th>
+                    <td>
+                <span class="pull-right">
+                    <a href="upload/ittun_linux64.tar.gz" class="btn btn-inverse">
+                        <i class="icon-white icon-download"></i> Download
+                    </a>
+                </span>
+                    </td>
+                </tr>
+                <!--<tr id="dl-linux-arm">-->
+                    <!--<th>Linux/ARM</th>-->
+                    <!--<td>-->
+                <!--<span class="pull-right">-->
+                    <!--<a href="https://dl.ngrok.com/ngrok_2.0.19_linux_arm.zip" class="btn btn-inverse">-->
+                        <!--<i class="icon-white icon-download"></i> Download-->
+                    <!--</a>-->
+                <!--</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+
+                <!--<tr id="dl-freebsd-amd64">-->
+                    <!--<th>FreeBSD</th>-->
+                    <!--<td>-->
+                <!--<span class="pull-right">-->
+                    <!--<a href="https://dl.ngrok.com/ngrok_2.0.19_freebsd_amd64.zip" class="btn btn-inverse">-->
+                        <!--<i class="icon-white icon-download"></i> Download-->
+                    <!--</a>-->
+                <!--</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+
+                <!--<tr id="more-platforms">-->
+                    <!--<th colspan="2"><a href="https://ngrok.com/#" onclick="return morePlatforms()">More platforms</a>-->
+                    <!--</th>-->
+                <!--</tr>-->
+                <!--<tr id="dl-darwin-386" class="hide">-->
+                    <!--<th>Mac OS X 32-bit</th>-->
+                    <!--<td>-->
+                <!--<span class="pull-right">-->
+                    <!--<a href="https://dl.ngrok.com/ngrok_2.0.19_darwin_386.zip" class="btn btn-inverse">-->
+                        <!--<i class="icon-white icon-download"></i> Download-->
+                    <!--</a>-->
+                <!--</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+                <!--<tr id="dl-windows-amd64" class="hide">-->
+                    <!--<th>Windows 64-bit</th>-->
+                    <!--<td>-->
+                <!--<span class="pull-right">-->
+                    <!--<a href="https://dl.ngrok.com/ngrok_2.0.19_windows_amd64.zip" class="btn btn-inverse">-->
+                        <!--<i class="icon-white icon-download"></i> Download-->
+                    <!--</a>-->
+                <!--</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+                <!--<tr id="dl-linux-386" class="hide">-->
+                    <!--<th>Linux 32-bit</th>-->
+                    <!--<td>-->
+                <!--<span class="pull-right">-->
+                    <!--<a href="https://dl.ngrok.com/ngrok_2.0.19_linux_386.zip" class="btn btn-inverse">-->
+                        <!--<i class="icon-white icon-download"></i> Download-->
+                    <!--</a>-->
+                <!--</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+
+                <!--<tr id="dl-freebsd-386" class="hide">-->
+                    <!--<th>FreeBSD 32-bit</th>-->
+                    <!--<td>-->
+                <!--<span class="pull-right">-->
+                    <!--<a href="https://dl.ngrok.com/ngrok_2.0.19_freebsd_386.zip" class="btn btn-inverse">-->
+                        <!--<i class="icon-white icon-download"></i> Download-->
+                    <!--</a>-->
+                <!--</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+
+                </tbody>
+            </table>
+            <script type="text/javascript">
+                var platform = navigator.platform.toUpperCase();
+                var dlElem;
+                if (platform.indexOf('MAC') !== -1) {
+                    dlElem = document.getElementById("dl-darwin-amd64");
+                } else if (platform.indexOf('WIN') !== -1) {
+                    dlElem = document.getElementById("dl-windows-386");
+                } else if (platform.indexOf('LINUX') !== -1) {
+                    if (platform.indexOf('ARM') !== -1) {
+                        dlElem = document.getElementById("dl-linux-arm");
+                    } else {
+                        dlElem = document.getElementById("dl-linux-amd64");
+                    }
+                }
+
+                if (dlElem) {
+                    dlElem.className += " detected";
+                    var button = dlElem.getElementsByTagName("a")[0];
+                    button.className = button.className.replace("btn-inverse", "btn-success");
+                }
+
+                function morePlatforms() {
+                    document.getElementById("more-platforms").className = "hide";
+                    document.getElementById("dl-windows-amd64").className = "";
+                    document.getElementById("dl-darwin-386").className = "";
+                    document.getElementById("dl-linux-386").className = "";
+                    document.getElementById("dl-freebsd-386").className = "";
+                    return false;
+                }
+            </script>
+            <h4>Step 2: 解压</h4>
+
+            <code class="well">$ tar -zcvf ittun_linux64.tar.gz</code>
+
+            <h4>Step 3: 修改启动文件</h4>
+            <p>编辑打开startup 文件,修改二级域名与端口<br>
+                任意域名,冲突起不来则换一下,端口为本地项目端口
+            </p>
+            <code class="well">ngrok -config ngrok.cfg -subdomain [demo] [8080]</code>
+
+            <h4>Step 4: 启动!</h4>
+            windows 双击启动startup.bat，
+            <code class="well">$ ./stratup.sh</code>
+        </div>
+    </div>
+
+    <hr>
+    <!--<div class="row-fluid">-->
+    <!--<h2 style="font-size:29px"><strong>661839747</strong> connections proxied to <strong>21721812</strong> tunnels-->
+    <!--</h2>-->
+    <!--</div>-->
+    <!--<hr>-->
+    <!--<div class="row-fluid quotes">-->
+    <!--<div class="span6">-->
+    <!--<blockquote>so ngrok.com is basically the greatest thing ever.-->
+    <!--<small>@philadams</small>-->
+    <!--</blockquote>-->
+    <!--<blockquote>ngrok: moved ~/bin already, the web inspector is gold-->
+    <!--<small>@pedromelo</small>-->
+    <!--</blockquote>-->
+    <!--<blockquote>ngrok, probably the best tool I have started to use for my webwork since firebug also great-->
+    <!--support @inconshreveable-->
+    <!--<small>@Botto</small>-->
+    <!--</blockquote>-->
+    <!--<blockquote>#ngrok is a dream for testing localhost with remote APIs!-->
+    <!--<small>@davejlong</small>-->
+    <!--</blockquote>-->
+
+    <!--</div>-->
+    <!--<div class="span6">-->
+    <!--<blockquote>Ngrok is the software equivalent of Slash's guitar solo in "Sweet Child of Mine"-->
+    <!--<small>@kevinwhinnery</small>-->
+    <!--</blockquote>-->
+    <!--<blockquote>#ngrok has become essential to my workflow. Makes testing responsive designs so much easier.-->
+    <!--<small>@_shadj</small>-->
+    <!--</blockquote>-->
+    <!--<blockquote>ngrok is genius, replaying requests makes webhooks 1M times easier to handle. ngrok.com-->
+    <!--<small>@Breefield</small>-->
+    <!--</blockquote>-->
+    <!--<blockquote>#ngrok has got to be the easiest local tunnel solution I've ever used.-->
+    <!--<small>@thecodeboss</small>-->
+    <!--</blockquote>-->
+
+    <!--</div>-->
+    <!--</div>-->
+    <!--<a href="https://ngrok.com/love" class="pull-right">More love for ngrok →</a>-->
+</div>
+
+
+<!--<div class="container-fluid">-->
+    <!--<hr>-->
+<!--</div>-->
+<div id="footer">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            © <a href="#">ittun.com</a> 2015 © 粤ICP备15099276号
+            <ul class="pull-right text-right unstyled muted">
+                <!--<li><a><img src="./ngrok - secure introspectable tunnels to localhost_files/email.png"></a></li>-->
+                <li>
+                    <hr>
+                </li>
+                <li><a>QQ：451657210</a></li>
+                <li><a>QQ群：201419208</a></li>
+                <li><a href="mailto:chairv@yeah.net">chairv@yeah.net</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

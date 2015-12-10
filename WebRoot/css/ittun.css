@@ -34,7 +34,7 @@ header{
     margin-top: 0.5em;
     content: "";
     float: left;
-    border: 1.5em solid #287E7D;
+    border: 1.5em solid #428BCA;
 }
 
 .ribbon:after {
@@ -59,7 +59,7 @@ header{
 }
 
 .ribbon span{
-    background:#287E7D;
+    background:#428BCA;
     display:inline-block;
     line-height:3em;
     padding:0 1em;
@@ -109,7 +109,7 @@ h2 {
     padding-top: 30px;
     /*margin-bottom: 32px;*/
     font-weight: 500;
-    color: #287e7d;
+    color: #428BCA;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-style: normal;
 }
@@ -122,7 +122,7 @@ h2 span {
 
 .text-1 {
     font: 200 18px/40px 'Open Sans Condensed', sans-serif;
-    color: #287e7d;
+    color: #428BCA;
     margin-bottom: 9px;
 }
 
@@ -134,7 +134,7 @@ h2 span {
 }
 
 .color1 {
-    color: #287e7d;
+    color: #428BCA;
 }
 
 .color2{
@@ -146,7 +146,7 @@ h2 span {
     clear: both;
 }
 .text-3{
-    color: #287e7d;
+    color: #428BCA;
 }
 
 .download-ul ol{
