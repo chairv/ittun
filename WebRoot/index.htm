@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
     <link rel="stylesheet" type="text/css" href="css/ittun-ngrok.css">
-
+    <script type="text/javascript" src="js/lazyload.min.js"></script>
 </head>
 <body>
 
@@ -114,7 +114,10 @@
             </p>
         </div>
     </div>
-    <img src="images/webhooks.jpg">
+    <!--<img src="images/webhooks.jpg">-->
+    <img  src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+            data-src=images/webhooks.jpg
+            onload=lzld(this) />
 
     <hr>
     <!--<div class="row-fluid">-->
@@ -346,6 +349,6 @@
     </div>
 </div>
 
-
+<!--<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>-->
 </body>
 </html>
