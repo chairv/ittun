@@ -139,7 +139,8 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <h2 id="download">下载客户端</h2>
-            <p>version:1.2 修改了localhost：4040调试页面的标题及样式 2015-12-17</p>
+
+            <p>version:1.2 增加mac客户端 2015-12-25</p>
 
             <p>安装方便: 下载、解压、修改二级域名与端口、启动.</p>
             <h4>Step 1: Download ittun</h4>
@@ -175,16 +176,16 @@
                 </span>
                     </td>
                 </tr>
-                <!--<tr id="dl-linux-arm">-->
-                <!--<th>Linux/ARM</th>-->
-                <!--<td>-->
-                <!--<span class="pull-right">-->
-                <!--<a href="https://dl.ngrok.com/ngrok_2.0.19_linux_arm.zip" class="btn btn-inverse">-->
-                <!--<i class="icon-white icon-download"></i> Download-->
-                <!--</a>-->
-                <!--</span>-->
-                <!--</td>-->
-                <!--</tr>-->
+                <tr id="dl-linux-arm">
+                    <th>Mac</th>
+                    <td>
+                <span class="pull-right">
+                <a href="upload/ittun_mac.tar.gz" class="btn btn-inverse">
+                    <i class="icon-white icon-download"></i> Download
+                </a>
+                </span>
+                    </td>
+                </tr>
 
                 <!--<tr id="dl-freebsd-amd64">-->
                 <!--<th>FreeBSD</th>-->
@@ -343,19 +344,15 @@
         © <a href="#">ittun.com</a> 2015 © 粤ICP备15099276号
         <div class="row-fluid">
             <ul class="pull-left text-left unstyled muted" id="wxzf">
-                <!--<li><img src="images/wxzf.png" class="zjimg"></li>-->
-              <li>  <img src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-                     data-src=images/wxzf8.png
-                     onload=lzld(this) class="zjimg">
+                <li>
+                    <img src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                         data-src=images/wxzf.png
+                         onload=lzld(this) class="zjimg">
 
-                <img src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-                     data-src=images/wxzf.png
-                     onload=lzld(this) class="zjimg">
-
-                  <img src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-                       data-src=images/zfb.png
-                       onload=lzld(this) class="zjimg">
-              </li>
+                    <img src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+                         data-src=images/zfb.png
+                         onload=lzld(this) class="zjimg">
+                </li>
             </ul>
 
             <ul class="pull-right text-right unstyled muted">
@@ -365,12 +362,12 @@
                 <li><a>QQ：451657210</a></li>
                 <li><a>QQ群：201419208</a></li>
                 <li><a href="mailto:chairv@yeah.net">chairv@yeah.net</a></li>
-                <li><a onclick="showzf()">资助</a></li>
+                <li><a onclick="showzf()" href="#buttom">资助</a></li>
             </ul>
         </div>
     </div>
 </div>
-
+<div id="buttom"></div>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">
     $('#wxzf').hide();
