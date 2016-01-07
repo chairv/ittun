@@ -171,7 +171,7 @@
                     </td>
                 </tr>
                 <tr id="dl-linux-amd64">
-                    <th>Linux64</th>
+                    <th>Linux-amd64</th>
                     <td>
                 <span class="pull-right">
                     <a href="upload/ittun_linux64.tar.gz" class="btn btn-inverse">
@@ -180,7 +180,7 @@
                 </span>
                     </td>
                 </tr>
-                <tr id="dl-linux-arm">
+                <tr id="dl-linux-mac">
                     <th>Mac</th>
                     <td>
                 <span class="pull-right">
@@ -191,16 +191,16 @@
                     </td>
                 </tr>
 
-                <!--<tr id="dl-freebsd-amd64">-->
-                <!--<th>FreeBSD</th>-->
-                <!--<td>-->
-                <!--<span class="pull-right">-->
-                <!--<a href="https://dl.ngrok.com/ngrok_2.0.19_freebsd_amd64.zip" class="btn btn-inverse">-->
-                <!--<i class="icon-white icon-download"></i> Download-->
-                <!--</a>-->
-                <!--</span>-->
-                <!--</td>-->
-                <!--</tr>-->
+                <tr id="dl-linux-arm">
+                    <th>Linux-arm</th>
+                    <td>
+                <span class="pull-right">
+                <a href="upload/ittun_linuxarm.tar.gz" class="btn btn-inverse">
+                    <i class="icon-white icon-download"></i> Download
+                </a>
+                </span>
+                    </td>
+                </tr>
 
                 <!--<tr id="more-platforms">-->
                 <!--<th colspan="2"><a href="https://ngrok.com/#" onclick="return morePlatforms()">More platforms</a>-->
@@ -271,14 +271,14 @@
                     button.className = button.className.replace("btn-inverse", "btn-success");
                 }
 
-                function morePlatforms() {
-                    document.getElementById("more-platforms").className = "hide";
-                    document.getElementById("dl-windows-amd64").className = "";
-                    document.getElementById("dl-darwin-386").className = "";
-                    document.getElementById("dl-linux-386").className = "";
-                    document.getElementById("dl-freebsd-386").className = "";
-                    return false;
-                }
+//                function morePlatforms() {
+//                    document.getElementById("more-platforms").className = "hide";
+//                    document.getElementById("dl-windows-amd64").className = "";
+//                    document.getElementById("dl-darwin-386").className = "";
+//                    document.getElementById("dl-linux-386").className = "";
+//                    document.getElementById("dl-freebsd-386").className = "";
+//                    return false;
+//                }
             </script>
             <h4>Step 2: 解压</h4>
 
