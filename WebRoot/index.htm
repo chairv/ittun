@@ -153,11 +153,21 @@
                 <!--</span>-->
                 <!--</td>-->
                 <!--</tr>-->
-                <tr id="dl-windows-386" class=" detected">
+                <tr id="dl-windows-64" class="detected">
                     <th>Windows64</th>
                     <td>
                 <span class="pull-right">
                     <a href="upload/ittun_win64.zip" class="btn btn-success">
+                        <i class="icon-white icon-download"></i> Download
+                    </a>
+                </span>
+                    </td>
+                </tr>
+                <tr id="dl-windows-386">
+                    <th>Windows32</th>
+                    <td>
+                <span class="pull-right">
+                    <a href="upload/ittun_win32.zip" class="btn btn-success">
                         <i class="icon-white icon-download"></i> Download
                     </a>
                 </span>
@@ -245,9 +255,10 @@
             </table>
             <script type="text/javascript">
                 var platform = navigator.platform.toUpperCase();
+                debugger;
                 var dlElem;
                 if (platform.indexOf('MAC') !== -1) {
-                    dlElem = document.getElementById("dl-darwin-amd64");
+                    dlElem = document.getElementById("dl-linux-mac");
                 } else if (platform.indexOf('WIN') !== -1) {
                     dlElem = document.getElementById("dl-windows-386");
                 } else if (platform.indexOf('LINUX') !== -1) {
