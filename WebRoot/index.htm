@@ -49,7 +49,7 @@
 
 <div class="container-fluid">
     <hr style="margin-top: -1px;">
-    <!--<a href="http://www.aliyun.com/act/aliyun/yunma.html" target="_blank">新年有购买服务器的朋友关注拉,阿里云服务器9折推荐码：J1RB5Z</a>-->
+    <a href="http://www.aliyun.com/act/aliyun/yunma.html" target="_blank">购买服务器的朋友关注拉,阿里云服务器9折推荐码：J1RB5Z</a>
     <!--<marquee style="WIDTH: 680px; HEIGHT: 18px" scrollamount="2" direction="left">-->
     <!--<p style="color:#dd4814;font-weight: 100"></p>-->
     <!--</marquee>-->
@@ -219,6 +219,17 @@
                     </td>
                 </tr>
 
+                <!--<tr id="test">-->
+                    <!--<th>test</th>-->
+                    <!--<td>-->
+                    <!--<span class="pull-right">-->
+                    <!--<a href="#" class="btn btn-inverse">-->
+                        <!--<i class="icon-white icon-download"></i> Download-->
+                    <!--</a>-->
+                    <!--</span>-->
+                    <!--</td>-->
+                <!--</tr>-->
+
                 <!--<tr id="more-platforms">-->
                 <!--<th colspan="2"><a href="https://ngrok.com/#" onclick="return morePlatforms()">More platforms</a>-->
                 <!--</th>-->
@@ -269,7 +280,6 @@
             </table>
             <script type="text/javascript">
                 var platform = navigator.platform.toUpperCase();
-                debugger;
                 var dlElem;
                 if (platform.indexOf('MAC') !== -1) {
                     dlElem = document.getElementById("dl-linux-mac");
@@ -392,13 +402,45 @@
         </div>
     </div>
 </div>
-<div id="buttom"></div>
-<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-<script type="text/javascript">
-    $('#wxzf').hide();
-    function showzf() {
-        $('#wxzf').toggle('fast');
-    }
-</script>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true" style="top:40%">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close"
+                        data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    资助ITTUN,让它更好。
+                </h4>
+            </div>
+            <div class="modal-body">
+                <img src="images/wxzf.png" class="zjimg">
+                <img src="images/zfb.png" class="zjimg">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">确定
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+
+    <!--<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>-->
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $('#wxzf').hide();
+        function showzf() {
+            $('#wxzf').toggle('fast');
+        }
+
+        $('a', '#dl').on('click', function () {
+            $('#myModal').modal('show');
+        });
+    </script>
 </body>
 </html>
