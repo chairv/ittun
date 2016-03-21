@@ -146,16 +146,6 @@
             <h4><a href="http://pan.baidu.com/s/1botw80J" target="_blank">Step 1: 客户端文件</a></h4>
             <table id="dl" class="table">
                 <tbody>
-                <!--<tr id="dl-darwin-amd64">-->
-                <!--<th>Mac OS X</th>-->
-                <!--<td>-->
-                <!--<span class="pull-right">-->
-                <!--<a href="https://dl.ngrok.com/ngrok_2.0.19_darwin_amd64.zip" class="btn btn-inverse">-->
-                <!--<i class="icon-white icon-download"></i> Download-->
-                <!--</a>-->
-                <!--</span>-->
-                <!--</td>-->
-                <!--</tr>-->
                 <tr id="dl-windows-64" class="detected">
                     <th>Windows64</th>
                     <td>
@@ -220,14 +210,14 @@
                 </tr>
 
                 <!--<tr id="test">-->
-                    <!--<th>test</th>-->
-                    <!--<td>-->
-                    <!--<span class="pull-right">-->
-                    <!--<a href="#" class="btn btn-inverse">-->
-                        <!--<i class="icon-white icon-download"></i> Download-->
-                    <!--</a>-->
-                    <!--</span>-->
-                    <!--</td>-->
+                <!--<th>test</th>-->
+                <!--<td>-->
+                <!--<span class="pull-right">-->
+                <!--<a href="#" class="btn btn-inverse">-->
+                <!--<i class="icon-white icon-download"></i> Download-->
+                <!--</a>-->
+                <!--</span>-->
+                <!--</td>-->
                 <!--</tr>-->
 
                 <!--<tr id="more-platforms">-->
@@ -298,15 +288,6 @@
                     var button = dlElem.getElementsByTagName("a")[0];
                     button.className = button.className.replace("btn-inverse", "btn-success");
                 }
-
-                //                function morePlatforms() {
-                //                    document.getElementById("more-platforms").className = "hide";
-                //                    document.getElementById("dl-windows-amd64").className = "";
-                //                    document.getElementById("dl-darwin-386").className = "";
-                //                    document.getElementById("dl-linux-386").className = "";
-                //                    document.getElementById("dl-freebsd-386").className = "";
-                //                    return false;
-                //                }
             </script>
             <h4>Step 2: 解压</h4>
 
@@ -326,51 +307,8 @@
     </div>
 
     <hr>
-    <!--<div class="row-fluid">-->
-    <!--<h2 style="font-size:29px"><strong>661839747</strong> connections proxied to <strong>21721812</strong> tunnels-->
-    <!--</h2>-->
-    <!--</div>-->
-    <!--<hr>-->
-    <!--<div class="row-fluid quotes">-->
-    <!--<div class="span6">-->
-    <!--<blockquote>so ngrok.com is basically the greatest thing ever.-->
-    <!--<small>@philadams</small>-->
-    <!--</blockquote>-->
-    <!--<blockquote>ngrok: moved ~/bin already, the web inspector is gold-->
-    <!--<small>@pedromelo</small>-->
-    <!--</blockquote>-->
-    <!--<blockquote>ngrok, probably the best tool I have started to use for my webwork since firebug also great-->
-    <!--support @inconshreveable-->
-    <!--<small>@Botto</small>-->
-    <!--</blockquote>-->
-    <!--<blockquote>#ngrok is a dream for testing localhost with remote APIs!-->
-    <!--<small>@davejlong</small>-->
-    <!--</blockquote>-->
-
-    <!--</div>-->
-    <!--<div class="span6">-->
-    <!--<blockquote>Ngrok is the software equivalent of Slash's guitar solo in "Sweet Child of Mine"-->
-    <!--<small>@kevinwhinnery</small>-->
-    <!--</blockquote>-->
-    <!--<blockquote>#ngrok has become essential to my workflow. Makes testing responsive designs so much easier.-->
-    <!--<small>@_shadj</small>-->
-    <!--</blockquote>-->
-    <!--<blockquote>ngrok is genius, replaying requests makes webhooks 1M times easier to handle. ngrok.com-->
-    <!--<small>@Breefield</small>-->
-    <!--</blockquote>-->
-    <!--<blockquote>#ngrok has got to be the easiest local tunnel solution I've ever used.-->
-    <!--<small>@thecodeboss</small>-->
-    <!--</blockquote>-->
-
-    <!--</div>-->
-    <!--</div>-->
-    <!--<a href="https://ngrok.com/love" class="pull-right">More love for ngrok →</a>-->
 </div>
 
-
-<!--<div class="container-fluid">-->
-<!--<hr>-->
-<!--</div>-->
 <div id="footer">
     <div class="container-fluid">
         © <a href="#">ittun.com</a> 2015 © <a href="http://www.miitbeian.gov.cn">粤ICP备15099276号</a>
@@ -422,7 +360,7 @@
                 <img src="images/zfb.png" class="zjimg">
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default"
+                <button type="button" class="btn btn-default" id="zzBtn"
                         data-dismiss="modal">确定
                 </button>
             </div>
@@ -438,8 +376,15 @@
             $('#wxzf').toggle('fast');
         }
 
+        var url;
         $('a', '#dl').on('click', function () {
             $('#myModal').modal('show');
+            url = this.href;
+            return false;
+        });
+
+        $('#zzBtn').on('click', function () {
+             window.open(url);
         });
     </script>
 </body>
