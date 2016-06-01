@@ -30,6 +30,22 @@
                     交流圈
                 </a>
                 </li>
+
+                <!--<li class="">-->
+                    <!--<a href="http://pi.ittun.com" target="_blank">说说</a>-->
+                <!--</li>-->
+
+                <!--<li class="">-->
+                <!--<a href="#">Product</a>-->
+                <!--</li>-->
+
+                <!--<li class="">-->
+                <!--<a href="#">FAQ</a>-->
+                <!--</li>-->
+
+                <!--<li class="">-->
+                <!--<a href="#">Login</a>-->
+                <!--</li>-->
             </ul>
             <h3 class="wordmark muted"><a href="#">IT TUN</a></h3>
         </div>
@@ -109,7 +125,74 @@
     <div class="container-fluid">
         <div class="row-fluid">
             <p>安装方便: 下载、解压、修改二级域名与端口、启动.</p>
-            <h4><a href="http://pan.baidu.com/s/1botw80J" target="_blank">Step 1: 客户端文件(17.2)</a></h4>
+            <h4><a href="http://pan.baidu.com/s/1botw80J" target="_blank">Step 1: 客户端文件</a></h4>
+            <table id="17.0" class="table download-table" style="display: none">
+                <tbody>
+                <tr id="dl-windows-64" class="detected">
+                    <th>Windows64</th>
+                    <td>
+                <span class="pull-right">
+                    <a href="upload/ittun_win64.zip" class="btn btn-success">
+                        <i class="icon-white icon-download"></i> Download
+                    </a>
+                </span>
+                    </td>
+                </tr>
+                <tr id="dl-windows-386">
+                    <th>Windows32</th>
+                    <td>
+                <span class="pull-right">
+                    <a href="upload/ittun_win32.zip" class="btn btn-success">
+                        <i class="icon-white icon-download"></i> Download
+                    </a>
+                </span>
+                    </td>
+                </tr>
+                <tr id="dl-linux-amd64">
+                    <th>Linux-amd64</th>
+                    <td>
+                <span class="pull-right">
+                    <a href="upload/ittun_linux64.tar.gz" class="btn btn-inverse">
+                        <i class="icon-white icon-download"></i> Download
+                    </a>
+                </span>
+                    </td>
+                </tr>
+                <tr id="dl-linux-i386">
+                    <th>Linux-i386(32)</th>
+                    <td>
+                <span class="pull-right">
+                    <a href="upload/ittun_linux32.tar.gz" class="btn btn-inverse">
+                        <i class="icon-white icon-download"></i> Download
+                    </a>
+                </span>
+                    </td>
+                </tr>
+
+                <tr id="dl-linux-mac">
+                    <th>Mac</th>
+                    <td>
+                <span class="pull-right">
+                <a href="upload/ittun_mac.tar.gz" class="btn btn-inverse">
+                    <i class="icon-white icon-download"></i> Download
+                </a>
+                </span>
+                    </td>
+                </tr>
+
+                <tr id="dl-linux-arm">
+                    <th>Linux-arm</th>
+                    <td>
+                <span class="pull-right">
+                <a href="upload/ittun_linuxarm.tar.gz" class="btn btn-inverse">
+                    <i class="icon-white icon-download"></i> Download
+                </a>
+                </span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
             <table id="17.2" class="table download-table">
                 <tbody>
                 <tr class="dl-windows-64" class="detected">
@@ -174,39 +257,47 @@
                 </span>
                     </td>
                 </tr>
-
-                <tr class="dl-linux-arm">
-                    <th>配置文件: ittun.yml</th>
-                    <td>
-                <span class="pull-right">
-                <a href="upload/ngrok.yml" class="btn btn-inverse">
-                    <i class="icon-white icon-download"></i> Download
-                </a>
-                </span>
-                    </td>
-                </tr>
                 </tbody>
             </table>
 
+            <script type="text/javascript">
+                var platform = navigator.platform.toUpperCase();
+                var dlElem;
+                if (platform.indexOf('MAC') !== -1) {
+                    dlElem = document.getElementById("dl-linux-mac");
+                } else if (platform.indexOf('WIN') !== -1) {
+                    dlElem = document.getElementById("dl-windows-386");
+                } else if (platform.indexOf('LINUX') !== -1) {
+                    if (platform.indexOf('ARM') !== -1) {
+                        dlElem = document.getElementById("dl-linux-arm");
+                    } else {
+                        dlElem = document.getElementById("dl-linux-amd64");
+                    }
+                }
 
+                if (dlElem) {
+                    dlElem.className += " detected";
+                    var button = dlElem.getElementsByTagName("a")[0];
+                    button.className = button.className.replace("btn-inverse", "btn-success");
+                }
+            </script>
+            <h4>Step 2: 解压</h4>
 
-            <h4>Step 2: 默认启动</h4>
+            <code class="well">$sudo tar -zxvf ittun_linux64.tar.gz</code>
 
-            <code class="well">
-                linux:  ./ngrok [port]  (tcp: ngrok -proto=tcp 22) <br>
-                windown:  ngrok [port]  (tcp: ./ngrok -proto=tcp 22)<br>
+            <h4>Step 3: 修改启动文件</h4>
 
-                更多:ngrok --help
-            </code>
+            <p>编辑打开startup 文件,修改二级域名与端口<br>
+                任意域名,冲突起不来则换一下,端口为本地项目端口
+            </p>
+            <code class="well">ngrok -config ngrok.cfg -subdomain [demo] [8080]</code>
 
-            <h4>Step 3: 指定二级域名</h4>
-            <code class="well">ngrok -subdomain [demo] [8080]</code>
-
-            <h4>Step 4: 指定配置文件</h4>
-            <code class="well">ngrok -config ittun.yml start [proname]
-            </code>
+            <h4>Step 4: 启动!</h4>
+            windows 双击启动startup.bat
+            <code class="well">$ ./stratup.sh</code>
         </div>
     </div>
+
     <hr>
 </div>
 
@@ -217,6 +308,13 @@
         <div class="row-fluid">
             <ul class="pull-left text-left unstyled muted" id="wxzf">
                 <li>
+                    <!--<img src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==-->
+                    <!--data-src=images/wxzf.png-->
+                    <!--onload=lzld(this) class="zjimg">-->
+
+                    <!--<img src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==-->
+                    <!--data-src=images/zfb.png-->
+                    <!--onload=lzld(this) class="zjimg">-->
                     <img src="images/wxzf.png" class="zjimg">
                     <img src="images/zfb.png" class="zjimg">
                 </li>
@@ -226,6 +324,7 @@
                 <li>
                     <hr>
                 </li>
+                <!--<li><a>QQ：451657210</a></li>-->
                 <li><a>QQ群：201419208</a></li>
                 <li><a href="mailto:chairv@yeah.net">chairv@yeah.net</a></li>
                 <li><a onclick="showzf()" href="#buttom">资助</a></li>
@@ -259,31 +358,10 @@
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal -->
-</div>
 
+    <!--<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>-->
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        var platform = navigator.platform.toUpperCase();
-        var dlElem;
-        if (platform.indexOf('MAC') !== -1) {
-            dlElem = document.getElementById("dl-linux-mac");
-        } else if (platform.indexOf('WIN') !== -1) {
-            dlElem = document.getElementById("dl-windows-386");
-        } else if (platform.indexOf('LINUX') !== -1) {
-            if (platform.indexOf('ARM') !== -1) {
-                dlElem = document.getElementById("dl-linux-arm");
-            } else {
-                dlElem = document.getElementById("dl-linux-amd64");
-            }
-        }
-
-        if (dlElem) {
-            dlElem.className += " detected";
-            var button = dlElem.getElementsByTagName("a")[0];
-            button.className = button.className.replace("btn-inverse", "btn-success");
-        }
-    </script>
     <script type="text/javascript">
         $('#wxzf').hide();
         function showzf() {
