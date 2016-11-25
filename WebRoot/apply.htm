@@ -2,24 +2,15 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>ngrok国内服务器 | ITTUN</title>
-    <meta name="keywords" content="ngrok服务器,ngrok微信开发,ngrok发布本地网站,微信url,微信开发url,微信开发神器"/>
-    <meta name="description" content="ngrok国内服务器,微信开发外网url,微信开发url,微信开发神器"/>
+    <title>ngrok服务器搭建 | ITTUN</title>
+    <meta name="keywords" content="搭建ngrok服务器"/>
+    <meta name="description" content="自编译ngrok服务器,ngrok搭建教程,自搭ngrok,ittun搭建ngrok教程"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
     <link rel="stylesheet" type="text/css" href="css/ittun-ngrok.css">
     <script type="text/javascript" src="js/lazyload.min.js"></script>
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?9fe19c270f3797c9346436d0a2b9ac0a";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
 </head>
 <body>
 
@@ -31,85 +22,62 @@
                 <!--<a href="#">Home</a>-->
                 <!--</li>-->
 
-                <li class="active">
-                    <a href="http://bbs.ittun.com" style="background-color: #89d7b3">
-                        交流圈
-                    </a>
-                </li>
+                <!--<li class="active">-->
+                <!--<a href="http://bbs.ittun.com" style="background-color: #89d7b3">-->
+                <!--交流圈-->
+                <!--</a>-->
+                <!--</li>-->
             </ul>
-            <h3 class="wordmark muted"><a href="#">IT TUN</a></h3>
+            <h3 class="wordmark muted"><a href="index.html">Ngrok服务器搭建</a></h3>
         </div>
     </div>
 </div>
 
 <div class="container-fluid">
-    <hr style="margin-top: -1px;">
+      <pre>
+         一: 准备工作:
+              1. 域名一个
+              2. 带公网ip服务器(linux64)
+          提示:未备案域名只能用国外服务器
+      </pre>
     <a href="https://help.aliyun.com/knowledge_detail/37048.html" target="_blank" style="color: blue">购买服务器的朋友关注拉,阿里云服务器9折推荐码：J1RB5Z</a><br>
     <a href="https://www.diyvm.com/page.aspx?c=referral&u=61743" target="_blank" style="color: blue">香港服务器2M 50元每月</a>
-    <!--<marquee style="WIDTH: 680px; HEIGHT: 18px" scrollamount="2" direction="left">-->
-    <!--<p style="color:#dd4814;font-weight: 100"></p>-->
-    <!--</marquee>-->
 </div>
 
 
 <div class="container-fluid">
-    <a style="border-top: 1px solid rgb(245, 245, 245); border-bottom: 1px solid rgb(245, 245, 245); padding: 10px; display: block;"
-       href="#footer"
-       class="text-center">
-        <span class="pull-left"><strong style="color:inherit">
-            ★学习交流</strong></span><span
-            style="color: rgb(163, 163, 163); display: inline-block; margin: 0px 5px;">
-                基本ngrok开源的学习交流
-             </span><span
-            class="pull-right">联系 ▶</span></a>
-
-    <div class="row-fluid">
-        <div class="span6">
-            <h4>本地web项目快速展示</h4>
-
-            <p>
-                1: 启动客户端<br>
-                2: 通过二级域名访问web项目
-            </p>
-        </div>
-        <div class="span6">
-            <h4>移动开发更方便</h4>
-
-            <p>
-                1: 填写微信开发者url,方便调用<br>
-                2: APP开发手机端调试
-            </p>
-        </div>
-    </div>
-
+    <pre>
+        二.域名解析配置
+         例如: 用域名的i.domain.com 作ngrok地址
+               则可以配置 i及其子域名的解析地址
+    </pre>
     <!--<img src="images/demo.jpg">-->
     <img src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-         data-src=images/demo.jpg
+         data-src=images/server/domain.jpg
          onload=lzld(this)>
 
     <div class="row-fluid">
-        <div class="span6">
-            <h4>远程办公更方便</h4>
-
-            <p>
-                1: 远程电脑上运行ittun client<br>
-                2: 指定相应端口(50000~59999),协议(tcp)<br>
-                3: 远程连接操作更方便<br>
-            </p>
+    <pre>
+        三.编译服务端:
+        <div style="margin-left: 10px;margin-left: 100px;">
+            填写编译信息:
+            <form id="applyForm">
+                <input type="email" placeholder="邮箱" name="email">
+                <input type="text" placeholder="域名" name="domain"><br>
+                <input type="text" placeholder="端口" name="port">
+                <select name="open">
+                    <option value="1">共享地址</option>
+                    <option value="1">不共享</option>
+                </select>
+                <button type="button" class="btn btn-success" style="margin-left: 165px" id="applySubmit">提交</button>
+            </form>
         </div>
-        <div class="span6">
-            <h4>免费使用,通道加密更安全</h4>
-
-            <p>
-                1: 通道全加密安全可靠<br>
-                2: 免费使用,交流分享
-            </p>
-        </div>
+    </pre>
     </div>
     <!--<img src="images/webhooks.jpg">-->
-    <img src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-         data-src=images/webhooks.jpg
-         onload=lzld(this)>
+    <!--<img src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==-->
+         <!--data-src=images/webhooks.jpg-->
+         <!--onload=lzld(this)>-->
 
     <hr>
 
@@ -216,35 +184,7 @@
 
                 </tbody>
             </table>
-            <div>
-                <a href="#more" data-toggle="collapse" class="btn btn-success pull-right">更多</a>
-            </div>
-            <div id="more" class="collapse">
-                <table id="more_ngrok" class="table download-table">
-                    <tbody>
-                    <tr class="dl-windows-64" class="detected">
-                        <th>ngrokc通用版</th>
-                        <td>
-                        <span class="pull-right">
-                            <a href="upload/comm/ngrokc" class="btn btn-inverse">
-                                <i class="icon-white icon-download"></i> Download
-                            </a>
-                        </span>
-                        </td>
-                    </tr>
-                    <tr class="dl-windows-64" class="detected">
-                        <th>ngrokc(OpenWrt-AR71XX(AR913X/AR933X))</th>
-                        <td>
-                        <span class="pull-right">
-                            <a href="upload/comm/ngrokc9331" class="btn btn-inverse">
-                                <i class="icon-white icon-download"></i> Download
-                            </a>
-                        </span>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+
             <h4>Step 2: 解压</h4>
             <code class="well">
                 unzip ittun_[name].zip
@@ -252,10 +192,6 @@
 
             <h4>Step 3: 默认启动命令</h4>
             <code class="well">
-			    linux: chmod 777 ngrok   <br>
-				       ./ngrok 端口  <br>
-				windows: 双击startup.bat文件  <br>
-                				
                 linux: ./ngrok [port] (tcp: ./ngrok -proto=tcp 22) <br>
                 windows: ngrok [port] (tcp: ngrok -proto=tcp 22)<br>
 
@@ -298,31 +234,6 @@
 </div>
 
 <!-- 模态框（Modal） -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-     aria-labelledby="myModalLabel" aria-hidden="true" style="top:25%">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close"
-                        data-dismiss="modal" aria-hidden="true">
-                    &times;
-                </button>
-                <h4 class="modal-title" id="myModalLabel">
-                    资助ITTUN,让它更好。
-                </h4>
-            </div>
-            <div class="modal-body">
-                <img src="images/wxzf.png" class="zjimg">
-                <img src="images/zfb.png" class="zjimg">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" id="zzBtn"
-                        data-dismiss="modal">确定
-                </button>
-            </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal -->
-</div>
 
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -363,6 +274,24 @@
     $('#zzBtn').on('click', function () {
         window.open(url);
     });
+
+    $('#applySubmit').on('click',function () {
+        var param = $('#applyForm').serialize();
+        $.ajax({
+            type: 'POST',
+            dataType: "json",
+            url: "http://server.ittun.vip/server/apply",
+            data: param,
+            dataType: 'jsonp',
+            success: function (data) {
+                 console.info(data);
+            },
+            error:function(xhr){
+                console.info(xhr)
+            }
+        });
+        console.info(param);
+    })
 </script>
 </body>
 </html>
