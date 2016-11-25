@@ -237,6 +237,7 @@
 
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="js/server.js"></script>
 <script type="text/javascript">
     var platform = navigator.platform.toUpperCase();
     var dlElem;
@@ -274,24 +275,6 @@
     $('#zzBtn').on('click', function () {
         window.open(url);
     });
-
-    $('#applySubmit').on('click',function () {
-        var param = $('#applyForm').serialize();
-        $.ajax({
-            type: 'POST',
-            dataType: "json",
-            url: "http://server.ittun.vip/server/apply",
-            data: param,
-            dataType: 'jsonp',
-            success: function (data) {
-                 console.info(data);
-            },
-            error:function(xhr){
-                console.info(xhr)
-            }
-        });
-        console.info(param);
-    })
 </script>
 </body>
 </html>
